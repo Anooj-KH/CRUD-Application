@@ -115,20 +115,22 @@ export const Userdata = () => {
                 <div className='row'>
                     {data.map((user) => (
                         <div key={user.id} className='col-md-4 col-sm-6 mt-5'>
-                            <div className='card' style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}>
-
-                                <div className='card-body text-start'>
-                                    {/* <h3>
-                                    ID:{user.id}
-                                </h3> */}
-                                    <h4 className="card-title"><span className='fw-bold'>Full Name : </span>
+                            <div className='card' style={{
+                                background: 'rgba(255, 255, 255, 0.3)',
+                                backdropFilter: 'blur(10px)',
+                                borderRadius: '20px',
+                                boxShadow: 'rgba(35, 46, 58, 0.5) 0px 8px 24px'
+                            }}>
+                                <div className='card-body text-start mt-2'>
+                                    <h3 className='text-center '>Employee id : {user.id}</h3>
+                                    <h4 className="card-title mt-3"><span className='fw-bold'>Full Name : </span>
                                         {user.name.firstname} {user.name.lastname}
                                     </h4>
                                     <h5 className='card-text mt-3'><span className='fw-bold'>Username : </span> {user.username}</h5>
                                     <h5 className='card-text mt-3'><span className='fw-bold'>Email : </span>  {user.email}</h5>
                                     <h5 className='card-text mt-3'><span className='fw-bold'>Password : </span> {user.password}</h5>
                                     <h5 className='card-text mt-3'><span className='fw-bold'>Phone : </span>  {user.phone}</h5>
-                                    <h5 className="card-text mt-3 mb-2"> <span className='fw-bold'>Address : </span>
+                                    <h5 className="card-text mt-3 mb-2"><span className='fw-bold'>Address : </span>
                                         {user.address.city || 'No City'} {user.address.street || 'No Street'}
                                     </h5>
                                     <div className='mt-4 text-end'>
@@ -138,6 +140,7 @@ export const Userdata = () => {
                                 </div>
                             </div>
                         </div>
+
                     ))}
 
                 </div>
